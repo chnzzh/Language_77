@@ -90,7 +90,6 @@ class Switcher_77:
 
         str_ans = ''.join(self.words[i] for i in str_base)
 
-        print(str_ans)
         return str_ans
 
     def decode(self, str_in: str) -> str:
@@ -104,5 +103,4 @@ class Switcher_77:
         str_ec = int.to_bytes(str_i, length=len(str_base), byteorder='big').lstrip(b'\x00')
         str_ec = str_ec.decode(self.encode_type)
 
-        print(str_ec)
         return str_ec

@@ -6,21 +6,23 @@
 
 Use any word list to encode and decode string!
 
+原理：标准编码后进制互换
+
 
 
 > 栗子：
 >
-> 用 **['我', '爱', '七七', 'qi', '77', 'yyds']**
+> 用 **['绝绝子', '好喝到', '跺', 'jio', '暴风吸入']**
 >
-> 编码 **'天高散孤云，落日澄空故乡影，飘摇游子心'**
+> 编码 **'无内鬼，开始交易'**
 >
 > 编码结果：
 >
-> >七七七七我yydsqiqiqiyyds爱爱爱七七77我爱77我qi七七爱我爱qi七七我七七爱我qiyydsyydsqiyyds我七七7777我qi爱qi七七qiqiyyds爱爱yyds爱我77yydsqiyyds我yydsqi爱爱qi我yydsqi七七77我爱yyds我qiyyds77爱我qi七七爱qi爱77qi七七77爱77爱我yydsqi77爱yydsyydsyyds七七我爱七七qi我爱七七77我yydsqi爱七七yyds77qi7777yyds七七yyds七七77
+> >暴风吸入暴风吸入jio暴风吸入跺暴风吸入暴风吸入绝绝子jio跺暴风吸入jio好喝到暴风吸入暴风吸入跺好喝到jiojio绝绝子暴风吸入jio暴风吸入绝绝子绝绝子暴风吸入绝绝子绝绝子跺暴风吸入绝绝子跺跺暴风吸入暴风吸入绝绝子暴风吸入暴风吸入跺暴风吸入好喝到jio好喝到暴风吸入好喝到jio跺跺绝绝子jiojiojio好喝到跺绝绝子
 >
 > 解码：
 >
-> > 天高散孤云，落日澄空故乡影，飘摇游子心
+> > 无内鬼，开始交易
 
 
 

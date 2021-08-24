@@ -8,11 +8,15 @@
 
 from switch_77 import Switcher_77
 
-encode_type = 'gbk'
-words = ['我', '爱', '七七', 'qi', '77', 'yyds']
+# 编码类型
+encode_type = 'gbk'     # 使用gbk编码中文长度较短
+# 编码字符列表
+words = ['绝绝子', '好喝到', '跺', 'jio', '暴风吸入']
 
 if __name__ == '__main__':
+    # 实例化
     A = Switcher_77(words=words, encode=encode_type)
+
     mode = 'e'
     print('Choose mode: /mode\nExit: /e\n')
     while 1:
@@ -23,6 +27,8 @@ if __name__ == '__main__':
         if str_in == '/e':
             break
         if mode in ['e', 'encode']:
-            A.encode(str_in)
+            # 编码，返回结果字符串
+            print(A.encode(str_in))
         else:
-            A.decode(str_in)
+            # 解码，返回结果字符串
+            print(A.decode(str_in))
