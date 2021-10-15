@@ -45,8 +45,6 @@ class Switcher_77:
         self.err = ['NoErr', 'Too little words']
         self.encode_type = encode
         self.words = words
-        if words is None:
-            words = ['q', 'i']
 
         self.__pre_treat()
         self.base = len(self.words)
@@ -95,11 +93,18 @@ class Switcher_77:
     def decode(self, str_in: str) -> str:
         map_rvs = self.map.copy()
         map_rvs.reverse()
+
+        # 将自定义字符替换为map对应的数字，用\x00间隔
         for i in map_rvs:
-            str_in = re.sub(r'(?<!\t)%s' % self.words[i], r'\t%s' % i, str_in)
-        str_base = [int(i) for i in (re.split(r'\t', str_in)[1:])]
+            str_in = re.sub('(?<![\x00])%s' % self.words[i], '\x00%s' % i, str_in)
+
+        # split 字符串
+        str_base = [int(i) for i in (re.split('\x00', str_in)[1:])]
+
+        # len(words)进制转为10进制
         str_i = qi_anybase_int(str_base, self.base)
 
+        # int解码为字节序
         str_ec = int.to_bytes(str_i, length=len(str_base), byteorder='big').lstrip(b'\x00')
         str_ec = str_ec.decode(self.encode_type)
 

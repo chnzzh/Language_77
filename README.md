@@ -6,7 +6,34 @@
 
 Use any word list to encode and decode string!
 
-原理：标准编码后进制互换
++ 灵感来源：兽音译者
+
++ 实现原理：标准编码后进制互换
++ 功能：不仅可以单符号转单符号，还可单符号转多符号。
+
+![image-20211015142804966](README.assets/image-20211015142804966.png)
+
+
+
+## 使用
+
+实例化：
+
+```python
+A = Switcher_77(words=['🐂', '🍺', '😅', '🔪'], encode='u8')
+```
+
+编码：
+
+```python
+A.encode("your words")
+```
+
+解码：
+
+```python
+A.decode("xxxxxxxxxx")
+```
 
 
 

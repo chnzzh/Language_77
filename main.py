@@ -9,9 +9,9 @@
 from switch_77 import Switcher_77
 
 # 编码类型
-encode_type = 'gbk'     # 使用gbk编码中文长度较短
+encode_type = 'u8'     # 使用gbk编码中文长度较短
 # 编码字符列表
-words = ['绝绝子', '好喝到', '跺', 'jio', '暴风吸入']
+words = ['🐂', '🍺', '😅', '🔪']
 
 if __name__ == '__main__':
     # 实例化
